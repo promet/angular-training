@@ -1,0 +1,26 @@
+.footer {
+  display: flex;
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  height: 50px;
+  bottom: 0;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid;
+
+}
+
+.left {
+  text-align: left;
+  flex-grow: 1;
+}
+
+.right {
+  text-align: right;
+  position: absolute;
+  right: 59px;
+
+}

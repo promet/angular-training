@@ -1,0 +1,6 @@
+<!-- Display the dropdown with options -->
+{{optionLabel}}
+<select id="language" (change)="onLanguageChange($event)">
+  <option value="" disabled selected></option>
+  <option  *ngFor="let lang of languages" [value]="lang">{{ lang }}</option>
+</select>

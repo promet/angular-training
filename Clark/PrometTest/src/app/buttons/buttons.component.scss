@@ -1,0 +1,8 @@
+.button-container {
+  display: flex;
+  flex-direction: column;
+  .btn {
+    position: relative;
+    top: 10px;
+  }
+}

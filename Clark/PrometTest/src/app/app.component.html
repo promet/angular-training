@@ -1,0 +1,51 @@
+<div class="main-content">
+
+  <div class="header-container">
+    <app-page-header [isLoggedIn]="isLoggedIn" [username]="username"
+      [selectedLanguage]="selectedLanguage"></app-page-header>
+  </div>
+
+
+  <div class="form-container">
+    <app-input-fields
+    *ngIf="!isLoggedIn"
+  (usernameChange)="handleUsernameChange($event)"
+  (passwordChange)="handlePasswordChange($event)"
+    ></app-input-fields>
+
+    <app-selections-dropdown
+    *ngIf="!isLoggedIn"
+    (languageChange)="handleLanguageChange($event)"
+    >
+    </app-selections-dropdown>
+
+    <div class="button-container">
+      <div class="register-button">
+        <app-buttons *ngIf="!isLoggedIn">Register</app-buttons>
+      </div>
+      <div class="login-button">
+        <app-buttons (loginEvent)="handleLogin()"
+          *ngIf="!isLoggedIn">Login</app-buttons>
+      </div>
+    </div>
+
+    <app-loader *ngIf="isLoading"></app-loader>
+
+    <div *ngIf="isLoggedIn" class="user-info">
+      <p>User: {{ username }}</p>
+      <p>Programming Language: {{ selectedLanguage }}</p>
+    </div>
+  </div>
+  <!--
+  [(selectedLanguage)]="selectedLanguage" -->
+
+   <div class="footer-container">
+    <app-page-footer>
+
+    </app-page-footer>
+   </div>
+
+
+</div>
+
+

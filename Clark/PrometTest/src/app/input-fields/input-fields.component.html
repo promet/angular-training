@@ -1,0 +1,9 @@
+<div class="input-container">
+  <input [(ngModel)]="username"  type="text" #usernameField placeholder=" " required="required" (input)="onUsernameChange($event)" >
+  <label #usernameLabel for="usernameField">Username</label>
+</div>
+
+<div class="input-container">
+  <input [(ngModel)]="password" type="password" #passwordField placeholder=" " required="required" (input)="onPasswordChange($event)" >
+  <label #passwordLabel for="passwordField">Password</label>
+</div>

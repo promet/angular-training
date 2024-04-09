@@ -1,0 +1,25 @@
+<header class="header navbar navbar-expand-lg bg-body-tertiary">
+
+    <div class="profile-picture" (click)="openUserProfileModal()">
+      <img src="assets/profile-icon.png" alt="Profile Picture">
+    </div>
+  <div class="logo" [ngClass]="{ 'logged-in': isLoggedIn }">
+    <img src="assets/promet-logo.png" alt="promet logo">
+  </div>
+  <div class="welcome-message" [ngClass]="{ 'logged-in': isLoggedIn }">
+    <h2>{{ isLoggedIn ? 'Welcome, ' + username + '!' : 'Angular Exam' }}</h2>
+  </div>
+  <div class="title">
+    <h2>{{ isLoggedIn ? 'Selected Language: ' + selectedLanguage : '' }}</h2>
+  </div>
+
+</header>
+
+<!-- <div class="title">
+  <ng-container>
+    <h1>{{ isLoggedIn ? 'Welcome, ' + username + '!' : 'Angular Exam' }}</h1>
+  </ng-container>
+  <ng-template #notLoggedIn>
+    <h1>Angular Exam</h1>
+  </ng-template>
+</div> -->

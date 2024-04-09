@@ -1,0 +1,13 @@
+<h2>Registration Form</h2>
+
+<app-input-fields (usernameChange)="handleUsernameChange($event)"
+  (passwordChange)="handlePasswordChange($event)"></app-input-fields>
+
+<!-- Additional input fields for name and birthday -->
+<label for="name">Name:</label>
+<input type="text" id="name" [(ngModel)]="name">
+
+<label for="birthday">Birthday:</label>
+<input type="date" id="birthday" [(ngModel)]="birthday">
+
+<button (click)="register()">Register</button>

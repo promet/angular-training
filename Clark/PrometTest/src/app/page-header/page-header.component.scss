@@ -1,0 +1,36 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid;
+  overflow: hidden;
+  flex: 1;
+}
+
+.welcome-message {
+  position: relative;
+  right: 300px;
+}
+.logged-in h2 {
+  position: relative;
+  left: 179px;
+}
+
+.logged-in .logo img{
+  right: 400px;
+}
+
+.logo img {
+  width: 200px;
+  position: relative;
+  right: 300px;
+}
+
+.profile-picture img {
+  width: 50px;
+}
+
+
+
+
